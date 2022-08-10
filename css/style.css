@@ -336,9 +336,14 @@ header .container nav .menu i {
 
 .services .services-content {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(40%, 1fr));
   grid-gap: 50px;
   padding-bottom: 120px;
+}
+@media (max-width: 765px) {
+  .services .services-content {
+    grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
+  }
 }
 
 .services-contente-2 {
@@ -998,6 +1003,16 @@ header .container nav .menu i {
     justify-content: center;
   }
 }
+@media (max-width: 500px) {
+  .pricing .subscribe .container {
+    padding: 0;
+    margin: 0;
+  }
+  .pricing .subscribe .input-box {
+    padding: 0;
+    margin: 0;
+  }
+}
 .pricing .subscribe {
   display: flex;
   flex-direction: column;
@@ -1141,3 +1156,8 @@ footer .container .social ul {
   gap: 30px;
 }
 /* End Footer */
+html,
+body {
+  width: 100%;
+  overflow-x: hidden;
+}
